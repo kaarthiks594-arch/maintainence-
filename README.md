@@ -1,54 +1,13 @@
-# KONE Maintenance Mobile App (React Native / Expo)
+> Why do I have a folder named ".expo" in my project?
 
-This is the mobile version of the KONE Maintenance app, built with React Native and Expo.
+The ".expo" folder is created when an Expo project is started using "expo start" command.
 
-## Prerequisites
+> What do the files contain?
 
-- Node.js (LTS)
-- npm or yarn
-- Expo Go app on your phone (Android/iOS) OR Android Studio / Xcode for simulators.
+- "devices.json": contains information about devices that have recently opened this project. This is used to populate the "Development sessions" list in your development builds.
+- "settings.json": contains the server configuration that is used to serve the application manifest.
 
-## Setup
+> Should I commit the ".expo" folder?
 
-1. Navigate to the mobile directory:
-   ```bash
-   cd mobile
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-## Running the App
-
-Start the development server:
-
-```bash
-npx expo start
-```
-
-- **Scan the QR code** with the Expo Go app (Android) or Camera (iOS) to run on your device.
-- **Press 'a'** to run on Android Emulator.
-- **Press 'i'** to run on iOS Simulator (macOS only).
-- **Press 'w'** to run in Web Browser (limited functionality for native modules).
-
-## Features Implemented
-
-- **Login Screen**: Simulated login (default: tech@kone.com).
-- **Dashboard**: List of elevators with search.
-- **Elevator Details**: View status and details.
-- **Maintenance Session**:
-  - Live timer.
-  - Issue logging.
-  - **Simulated Movement Tracking**: Tracks "technician position" every 5 seconds.
-- **Reports & Heatmaps**:
-  - **Vertical Heatmap**: Shows time spent on each floor.
-  - **Floor Heatmap**: Shows positioning within the elevator car.
-
-## Project Structure
-
-- `app/`: Expo Router screens and layouts.
-- `src/shared/`: Shared logic (types, demo data, Supabase client).
-- `src/context/`: Auth context and state management.
-- `src/components/`: Reusable UI components (if any).
+No, you should not share the ".expo" folder. It does not contain any information that is relevant for other developers working on the project, it is specific to your machine.
+Upon project creation, the ".expo" folder is already added to your ".gitignore" file.
